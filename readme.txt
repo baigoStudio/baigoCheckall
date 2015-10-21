@@ -1,5 +1,5 @@
-v0.0.9 jQuery baigoCheckall 表单全选插件
-(c) 2012 baigo - http://www.baigo.net/jQueryPlugins/baigoCheckall.php
+v0.1.0 jQuery baigoCheckall 表单全选插件
+(c) 2012 baigo - http://www.baigo.net/jquery/baigocheckall.html
 License: http://www.opensource.org/licenses/mit-license.php
 
 1 文件
