@@ -1,25 +1,25 @@
-v0.1.0 jQuery baigoCheckall 表单全选插件
-(c) 2012 baigo - http://www.baigo.net/jquery/baigocheckall.html
+v1.0 jQuery baigoCheckall plugin 表单全选插件
+(c) 2015 baigo studio - http://www.baigo.net/jquery/baigocheckall.html
 License: http://www.opensource.org/licenses/mit-license.php
 
-1 文件
-	1.1 baigoCheckall.js 全选插件
-	1.2 readme.txt 使用说明
+载入 jQuery 库文件，jQuery 库文件请到 http://www.jquery.com 下载，例：
+<script src="jquery.js" type="text/javascript"></script>
 
-2 用法
-	2.1 引入文件
-		2.1.1 引入 jQuery 库 <script src="jquery.min.js" type="text/javascript"></script> 此为 jQuery 库，请自行下载 http://www.jquery.com/download/
-		2.1.2 引入 baigoCheckall 插件 <script src="baigoCheckall.js" type="text/javascript"></script>
+载入 baigoCheckall 核心文件，例：
+<script src="baigoCheckall.min.js" type="text/javascript"></script>
 
-	2.2 初始化 baigoCheckall，如
-		obj_form = $("#form_demo").baigoCheckall();
+在需要操作的 checkbox 中定义 id 和 data-parent，其中，id 代表选框本身，data-parent 代表父元素的 id，例：
+<input type="checkbox" id="first" data-parent="none">
+<input type="checkbox" id="second_1" data-parent="first">
+<input type="checkbox" id="second_2" data-parent="first">
+<input type="checkbox" id="second_3" data-parent="first">
+<input type="checkbox" id="second_4" data-parent="first">
 
-	2.3 在需要操作的 checkbox 中定义 id 和 class，其中，id 代表选框本身，class 代表父元素的 id，如
-		<input type="checkbox" id="first" class="none">
-		<input type="checkbox" id="second_1" class="first">
-		<input type="checkbox" id="second_2" class="first">
-		<input type="checkbox" id="second_3" class="first">
-		<input type="checkbox" id="second_4" class="first">
+初始化插件，例：
+<script type="text/javascript">
+$(document).ready(function(){
+  $("#form_demo").baigoCheckall();
+});
+</script>
 
-		当用户选中 id 为 first 的选框的时候，class 为 first 的选框将全部被选中，反之则为未选中；当任意一个 class 为 first 的选框未被选中时，id 为 first 的选框也会处于未被选中状态。
-
+当用户选中 id 为 first 的选框的时候，data-parent 为 first 的选框将全部被选中，反之则为未选中；当任意一个 data-parent 为 first 的选框未被选中时，id 为 first 的选框也会处于未被选中状态。
